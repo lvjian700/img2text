@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C0A91EC25245542002140C3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A91EB25245542002140C3 /* main.swift */; };
 		3C0A91F52524562B002140C3 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3C0A91F42524562B002140C3 /* ArgumentParser */; };
+		3CB14FEC25A03F1D00AA7856 /* NSImage+ToCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14FEB25A03F1D00AA7856 /* NSImage+ToCGImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		3C0A91E825245542002140C3 /* img2text */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = img2text; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0A91EB25245542002140C3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3CB14FEB25A03F1D00AA7856 /* NSImage+ToCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+ToCGImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +61,18 @@
 		3C0A91EA25245542002140C3 /* img2text */ = {
 			isa = PBXGroup;
 			children = (
+				3CB14FEA25A03F1D00AA7856 /* extensions */,
 				3C0A91EB25245542002140C3 /* main.swift */,
 			);
 			path = img2text;
+			sourceTree = "<group>";
+		};
+		3CB14FEA25A03F1D00AA7856 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3CB14FEB25A03F1D00AA7856 /* NSImage+ToCGImage.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0A91EC25245542002140C3 /* main.swift in Sources */,
+				3CB14FEC25A03F1D00AA7856 /* NSImage+ToCGImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

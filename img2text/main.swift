@@ -6,27 +6,14 @@ import AppKit
 
 struct Img2text: ParsableCommand {
 
-    @Argument(help: "The phrase to repeat.")
+    @Argument(help: "PNG file path.")
     var pngFile: String
 
     mutating func run() throws {
-      let fileManager = FileManager.default
       guard
-        let pngData = fileManager.contents(atPath: pngFile),
-        let image = NSImage(data: pngData)
+        let image = NSImage(contentsOfFile: pngFile),
+        let cgImage = image.toCGImage()
       else {
-        print("File not found \(pngFile)")
-        return
-      }
-      
-      let size = image.size
-      var rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-
-      guard let cgImage = image.cgImage(
-        forProposedRect: &rect,
-        context: nil,
-        hints: nil
-      ) else {
         print("Can not load image: \(pngFile)")
         return
       }
@@ -38,7 +25,6 @@ struct Img2text: ParsableCommand {
       request.recognitionLevel = .accurate
 
       do {
-          // Perform the text-recognition request.
           try requestHandler.perform([request])
       } catch {
           print("Unable to perform the requests: \(error).")
