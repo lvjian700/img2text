@@ -61,7 +61,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/jlv/Desktop/ml.png"
+            argument = "$HOME/Desktop/ml.png"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

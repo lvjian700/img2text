@@ -10,6 +10,7 @@
 		3C0A91EC25245542002140C3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A91EB25245542002140C3 /* main.swift */; };
 		3C0A91F52524562B002140C3 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3C0A91F42524562B002140C3 /* ArgumentParser */; };
 		3CB14FEC25A03F1D00AA7856 /* NSImage+ToCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14FEB25A03F1D00AA7856 /* NSImage+ToCGImage.swift */; };
+		930D550E25A3DBE4009C7A99 /* ImageTextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D550D25A3DBE4009C7A99 /* ImageTextRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		3C0A91E825245542002140C3 /* img2text */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = img2text; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0A91EB25245542002140C3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3CB14FEB25A03F1D00AA7856 /* NSImage+ToCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+ToCGImage.swift"; sourceTree = "<group>"; };
+		930D550D25A3DBE4009C7A99 /* ImageTextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				3CB14FEA25A03F1D00AA7856 /* extensions */,
 				3C0A91EB25245542002140C3 /* main.swift */,
+				930D550D25A3DBE4009C7A99 /* ImageTextRecognizer.swift */,
 			);
 			path = img2text;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930D550E25A3DBE4009C7A99 /* ImageTextRecognizer.swift in Sources */,
 				3C0A91EC25245542002140C3 /* main.swift in Sources */,
 				3CB14FEC25A03F1D00AA7856 /* NSImage+ToCGImage.swift in Sources */,
 			);

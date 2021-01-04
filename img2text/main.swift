@@ -18,32 +18,15 @@ struct Img2text: ParsableCommand {
         return
       }
       
-      let requestHandler = VNImageRequestHandler(cgImage: cgImage)
-      
-      let request = VNRecognizeTextRequest(completionHandler: recognizeTextHandler)
-
-      request.recognitionLevel = .accurate
-
-      do {
-          try requestHandler.perform([request])
-      } catch {
-          print("Unable to perform the requests: \(error).")
+      ImageTextRecognizer().recognize(from: cgImage) { ret in
+        switch ret {
+          case .success(let recognizedStrings):
+            let text = recognizedStrings.joined(separator: " ")
+            print(text)
+          case .failure(let error):
+            print("Unable to recognize text from image, reason: \(error)")
+        }
       }
-  }
-  
-  func recognizeTextHandler(request: VNRequest, error: Error?) {
-      guard let observations =
-              request.results as? [VNRecognizedTextObservation] else {
-          return
-      }
-      let recognizedStrings = observations.compactMap { observation in
-          // Return the string of the top VNRecognizedText instance.
-          return observation.topCandidates(1).first?.string
-      }
-      
-      // Process the recognized strings.
-    let text = recognizedStrings.joined(separator: " ")
-    print(text)
   }
 }
 
