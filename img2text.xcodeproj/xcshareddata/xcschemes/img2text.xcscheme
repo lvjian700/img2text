@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1200"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -10,7 +10,16 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "cp ${BUILT_PRODUCTS_DIR}/img2text ${PROJECT_DIR}/bin&#10;">
+               scriptText = "mkdir -p ${PROJECT_DIR}/bin&#10;cp -f ${BUILT_PRODUCTS_DIR}/img2text ${PROJECT_DIR}/bin&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "3C0A91E725245542002140C3"
+                     BuildableName = "img2text"
+                     BlueprintName = "img2text"
+                     ReferencedContainer = "container:img2text.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
             </ActionContent>
          </ExecutionAction>
       </PostActions>
